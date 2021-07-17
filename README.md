@@ -12,7 +12,7 @@ type(of: ~double) // --> `CGFloat.self`
 type(of: ~cgFloat) // --> `Double.self`
 ```
 
-For extra flexibility, the conversion *to* `CGFloat` is overloaded such that it accepts any type that conforms to the `CGFloatConvertable` protocol, which adopts the same requirements as the existing `BinaryFloatingPoint` protocol. This means that you can add conformance to your own custom types. Just make sure not to add conformance to `CGFloat` itself so that the compiler can catch redundant/unnecessary usage of the FloatConverter `~` operator.
+For extra flexibility, the conversion *to* `CGFloat` is overloaded such that it accepts any type that conforms to the `CGFloatConvertible` protocol, which adopts the same requirements as the existing `BinaryFloatingPoint` protocol. This means that you can add conformance to your own custom types. Just make sure not to add conformance to `CGFloat` itself so that the compiler can catch redundant/unnecessary usage of the FloatConverter `~` operator.
 
 For simplicity, the conversion *from* `CGFloat` always returns a `Double`. If you want to propose a way to choose to return a `Float` instead, then please open a GitHub issue (if one doesn't already exist).
 

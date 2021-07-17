@@ -1,12 +1,12 @@
 import CoreGraphics
 
-public protocol CGFloatConvertable: BinaryFloatingPoint { }
+public protocol CGFloatConvertible: BinaryFloatingPoint { }
 
-extension Float: CGFloatConvertable { }
+extension Float: CGFloatConvertible { }
 
-extension Double: CGFloatConvertable { }
+extension Double: CGFloatConvertible { }
 
-public prefix func ~ <Source> (_ value: Source) -> CGFloat where Source: CGFloatConvertable {
+public prefix func ~ <Source> (_ value: Source) -> CGFloat where Source: CGFloatConvertible {
 	return CGFloat(value)
 }
 
