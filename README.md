@@ -1,5 +1,7 @@
 # Float Converter
 
+**Float Converter is now unnecessary because new versions of the Swift compiler can automatically convert between `CGFloat` and `Double` without any additional syntax. As a result, development and maintenance of Float Converter has ceased permanently.**
+
 Float Converter offers a simple unary prefix operator `~` for easily converting between `Float`/`Double` and `CGFloat` without verbose, explicit initializer invocations.
 
 ```swift
